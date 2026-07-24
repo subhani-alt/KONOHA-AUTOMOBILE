@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Volume2, VolumeX, Sliders, ShieldCheck, Zap, Sparkles } from 'lucide-react';
+import { ArrowRight, Volume2, VolumeX, Sliders, ShieldCheck, Zap, Sparkles, Play, X } from 'lucide-react';
 import SEO from '../components/common/SEO';
 import { FALLBACK_VEHICLES, FALLBACK_NEWS } from '../services/api';
 
 const Home = () => {
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
+  const [videoModalOpen, setVideoModalOpen] = useState(false);
   const [audio] = useState(() => new Audio('https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c6a282f1.mp3?filename=car-engine-rev-105260.mp3'));
 
   const toggleSound = () => {
@@ -23,25 +24,36 @@ const Home = () => {
       <SEO title="KONOHA AUTOMOBILI | Witness The Legend" description="Explore Konoha Automobili hypercar engineering, 3D WebGL configurator, and bespoke client atelier." />
 
       {/* ---------------------------------------------------- */}
-      {/* FULLSCREEN CINEMATIC HYPERCAR VIDEO HERO (BUGATTI STYLE) */}
+      {/* FULLSCREEN CINEMATIC HYPERCAR VIDEO HERO             */}
       {/* ---------------------------------------------------- */}
       <section className="relative w-full h-screen flex flex-col justify-between items-center pt-24 pb-16 px-6 lg:px-12 select-none">
         
-        {/* Fullscreen Direct Video Stream Background (Zero YouTube Errors) */}
+        {/* Fullscreen Video Background */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover scale-105"
-            poster="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1920&q=85"
-          >
-            <source
-              src="https://assets.mixkit.co/videos/preview/mixkit-sports-car-driving-on-a-road-41562-large.mp4"
-              type="video/mp4"
+          <div className="relative w-full h-full">
+            {/* Direct High-Resolution Hypercar Video Background */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover scale-105"
+              poster="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1920&q=85"
+            >
+              <source
+                src="https://assets.mixkit.co/videos/preview/mixkit-sports-car-driving-on-a-road-41562-large.mp4"
+                type="video/mp4"
+              />
+            </video>
+
+            {/* YouTube Embed Layer (HVf28fVK5Xk) */}
+            <iframe
+              src="https://www.youtube.com/embed/HVf28fVK5Xk?autoplay=1&mute=1&controls=0&loop=1&playlist=HVf28fVK5Xk&playsinline=1&rel=0&modestbranding=1"
+              className="w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover pointer-events-none border-0 scale-110 opacity-80"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              title="Konoha Bugatti HVf28fVK5Xk Video"
             />
-          </video>
+          </div>
 
           {/* Luxury Atmospheric Dark Overlays */}
           <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-black/30 to-black/60 pointer-events-none" />
@@ -83,12 +95,13 @@ const Home = () => {
 
           {/* Pill-Shaped Outline Action Buttons */}
           <div className="pt-4 flex items-center gap-4">
-            <Link
-              to="/vehicle/konoha-apex-stratos"
-              className="inline-flex items-center justify-center font-mono text-xs tracking-[0.3em] uppercase text-white hover:text-obsidian bg-transparent hover:bg-white border border-white/70 hover:border-white px-8 py-4 rounded-full transition-all duration-300 shadow-2xl hover:scale-105"
+            <button
+              onClick={() => setVideoModalOpen(true)}
+              className="inline-flex items-center gap-2.5 font-mono text-xs tracking-[0.3em] uppercase text-white hover:text-obsidian bg-transparent hover:bg-white border border-white/70 hover:border-white px-8 py-4 rounded-full transition-all duration-300 shadow-2xl hover:scale-105"
             >
-              WITNESS THE LEGEND
-            </Link>
+              <Play className="w-4 h-4 fill-current" />
+              <span>WITNESS THE LEGEND</span>
+            </button>
 
             <Link
               to="/configurator"
@@ -107,6 +120,30 @@ const Home = () => {
         </div>
 
       </section>
+
+      {/* ---------------------------------------------------- */}
+      {/* YOUTUBE CINEMATIC FULLSCREEN MODAL PLAYER (HVf28fVK5Xk) */}
+      {/* ---------------------------------------------------- */}
+      {videoModalOpen && (
+        <div className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-3xl flex items-center justify-center p-4 md:p-12 animate-fadeIn">
+          <button
+            onClick={() => setVideoModalOpen(false)}
+            className="absolute top-6 right-6 p-3 rounded-full bg-white/10 text-white hover:bg-copper hover:text-obsidian transition-colors z-50"
+            aria-label="Close Film"
+          >
+            <X className="w-6 h-6" />
+          </button>
+
+          <div className="w-full max-w-6xl aspect-video rounded-3xl overflow-hidden border border-copper/40 shadow-2xl relative">
+            <iframe
+              src="https://www.youtube.com/embed/HVf28fVK5Xk?autoplay=1&rel=0&modestbranding=1&controls=1"
+              className="w-full h-full border-0"
+              allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+              title="Bugatti Tourbillon HVf28fVK5Xk Film"
+            />
+          </div>
+        </div>
+      )}
 
       {/* ---------------------------------------------------- */}
       {/* BRAND PHILOSOPHY & KINETIC NUMBERS                   */}
