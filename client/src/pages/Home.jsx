@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Volume2, VolumeX, Sliders, ShieldCheck, Zap, Sparkles, Play, X } from 'lucide-react';
+import { ArrowRight, Volume2, VolumeX, Sliders, ShieldCheck, Zap, Sparkles } from 'lucide-react';
 import SEO from '../components/common/SEO';
 import { FALLBACK_VEHICLES, FALLBACK_NEWS } from '../services/api';
 
 const Home = () => {
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
-  const [videoModalOpen, setVideoModalOpen] = useState(false);
   const [audio] = useState(() => new Audio('https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c6a282f1.mp3?filename=car-engine-rev-105260.mp3'));
 
   const toggleSound = () => {
@@ -21,21 +20,21 @@ const Home = () => {
 
   return (
     <div className="relative min-h-screen bg-obsidian text-white overflow-hidden">
-      <SEO title="KONOHA AUTOMOBILI | Witness The Legend" description="Explore Konoha Automobili hypercar engineering, 3D WebGL configurator, and bespoke client atelier." />
+      <SEO title="KONOHA AUTOMOBILI | Hypercar Experience" description="Experience Konoha Automobili hypercar engineering, 3D WebGL configurator, and bespoke client atelier." />
 
       {/* ---------------------------------------------------- */}
-      {/* FULLSCREEN CINEMATIC HYPERCAR VIDEO HERO             */}
+      {/* FULLSCREEN AUTOPLAY HYPERCAR VIDEO HERO (NO TEXT MATTER) */}
       {/* ---------------------------------------------------- */}
-      <section className="relative w-full h-screen flex flex-col justify-between items-center pt-24 pb-16 px-6 lg:px-12 select-none">
+      <section className="relative w-full h-screen flex flex-col justify-between items-center pt-24 pb-12 px-6 lg:px-12 select-none">
         
-        {/* Fullscreen High-Definition Hypercar Driving Video Background (Zero Errors) */}
-        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-obsidian">
+        {/* Fullscreen HD Video Stream Playing Automatically on Site Open */}
+        <div className="absolute inset-0 z-0 overflow-hidden bg-black">
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="w-full h-full object-cover scale-105 opacity-90"
+            className="w-full h-full object-cover scale-105"
           >
             <source
               src="https://assets.mixkit.co/videos/preview/mixkit-sports-car-driving-on-a-road-41562-large.mp4"
@@ -47,9 +46,8 @@ const Home = () => {
             />
           </video>
 
-          {/* Luxury Atmospheric Dark Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-black/30 to-black/60 pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-obsidian pointer-events-none" />
+          {/* Minimal Vignette & Gradient Overlays */}
+          <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-black/60 pointer-events-none" />
           <div className="absolute inset-0 noise-overlay pointer-events-none" />
         </div>
 
@@ -57,85 +55,29 @@ const Home = () => {
         <div className="relative z-10 w-full flex justify-end">
           <button
             onClick={toggleSound}
-            className="flex items-center gap-2 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/15 hover:border-copper transition-all text-[10px] font-mono tracking-widest text-titanium-light uppercase"
+            className="flex items-center gap-2 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/15 hover:border-copper transition-all text-[10px] font-mono tracking-widest text-titanium-light uppercase shadow-xl"
           >
             {isPlayingAudio ? <Volume2 className="w-3.5 h-3.5 text-copper animate-pulse" /> : <VolumeX className="w-3.5 h-3.5 text-titanium-dark" />}
             <span>{isPlayingAudio ? 'Engine Rev Playing' : 'Exhaust Sound Sampler'}</span>
           </button>
         </div>
 
-        {/* Center Hero Name & Signature (Exact Bugatti Layout) */}
-        <div className="relative z-10 flex flex-col items-center text-center space-y-6 max-w-4xl mx-auto my-auto">
-          
-          {/* Cursive Signature Overlay Graphic */}
-          <div className="relative mb-[-1.5rem]">
-            <span className="font-signature text-7xl md:text-9xl text-white/95 drop-shadow-2xl tracking-normal select-none pointer-events-none block transform -rotate-3">
-              Jayson
-            </span>
-            <div className="w-64 md:w-96 h-0.5 bg-gradient-to-r from-transparent via-white/80 to-transparent mx-auto mt-[-1rem]" />
+        {/* Bottom Minimal Action Overlay (Clean Unobstructed Video View) */}
+        <div className="relative z-10 w-full flex items-center justify-between">
+          <div className="text-[10px] font-mono tracking-[0.3em] uppercase text-titanium-light bg-black/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+            KONOHA AUTOMOBILI © 2026
           </div>
 
-          {/* Large Spaced Main Title */}
-          <h1 className="font-brand text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-[0.25em] text-white leading-tight uppercase drop-shadow-lg">
-            F.K.P. HOMMAGE
-          </h1>
-
-          {/* Subtitle Monospaced Label */}
-          <p className="font-mono text-xs md:text-sm tracking-[0.3em] text-titanium-light uppercase max-w-2xl leading-relaxed drop-shadow-md">
-            HONORING THE HYPERCAR AND ITS VISIONARY CREATOR
-          </p>
-
-          {/* Pill-Shaped Action Buttons */}
-          <div className="pt-4 flex items-center gap-4">
-            <button
-              onClick={() => setVideoModalOpen(true)}
-              className="inline-flex items-center gap-2.5 font-mono text-xs tracking-[0.3em] uppercase text-white hover:text-obsidian bg-transparent hover:bg-white border border-white/70 hover:border-white px-8 py-4 rounded-full transition-all duration-300 shadow-2xl hover:scale-105"
-            >
-              <Play className="w-4 h-4 fill-current" />
-              <span>WITNESS THE LEGEND</span>
-            </button>
-
-            <Link
-              to="/configurator"
-              className="inline-flex items-center gap-2 font-mono text-xs tracking-[0.25em] uppercase text-copper hover:text-white bg-black/70 backdrop-blur-md border border-copper/50 hover:border-copper px-6 py-4 rounded-full transition-all"
-            >
-              <Sliders className="w-3.5 h-3.5" />
-              <span>3D STUDIO</span>
-            </Link>
-          </div>
-
-        </div>
-
-        {/* Clean Bottom Spacer */}
-        <div className="relative z-10 text-[9px] font-mono tracking-[0.3em] uppercase text-titanium-dark">
-          KONOHA AUTOMOBILI © 2026
+          <Link
+            to="/configurator"
+            className="inline-flex items-center gap-2 font-mono text-xs tracking-[0.25em] uppercase text-copper hover:text-white bg-black/70 backdrop-blur-md border border-copper/50 hover:border-copper px-6 py-3 rounded-full transition-all shadow-2xl"
+          >
+            <Sliders className="w-3.5 h-3.5" />
+            <span>ENTER 3D STUDIO</span>
+          </Link>
         </div>
 
       </section>
-
-      {/* ---------------------------------------------------- */}
-      {/* YOUTUBE CINEMATIC FULLSCREEN MODAL PLAYER (HVf28fVK5Xk) */}
-      {/* ---------------------------------------------------- */}
-      {videoModalOpen && (
-        <div className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-3xl flex items-center justify-center p-4 md:p-12 animate-fadeIn">
-          <button
-            onClick={() => setVideoModalOpen(false)}
-            className="absolute top-6 right-6 p-3 rounded-full bg-white/10 text-white hover:bg-copper hover:text-obsidian transition-colors z-50"
-            aria-label="Close Film"
-          >
-            <X className="w-6 h-6" />
-          </button>
-
-          <div className="w-full max-w-6xl aspect-video rounded-3xl overflow-hidden border border-copper/40 shadow-2xl relative">
-            <iframe
-              src="https://www.youtube.com/embed/HVf28fVK5Xk?autoplay=1&rel=0&modestbranding=1&controls=1"
-              className="w-full h-full border-0"
-              allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-              title="Bugatti Tourbillon HVf28fVK5Xk Film"
-            />
-          </div>
-        </div>
-      )}
 
       {/* ---------------------------------------------------- */}
       {/* BRAND PHILOSOPHY & KINETIC NUMBERS                   */}
