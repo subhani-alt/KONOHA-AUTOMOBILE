@@ -20,31 +20,24 @@ const Home = () => {
 
   return (
     <div className="relative min-h-screen bg-obsidian text-white overflow-hidden">
-      <SEO title="KONOHA AUTOMOBILI | Hypercar Experience" description="Experience Konoha Automobili hypercar engineering, 3D WebGL configurator, and bespoke client atelier." />
+      <SEO title="KONOHA AUTOMOBILI | Witness The Legend" description="Experience Konoha Automobili hypercar engineering, 3D WebGL configurator, and bespoke client atelier." />
 
       {/* ---------------------------------------------------- */}
-      {/* FULLSCREEN AUTOPLAY HYPERCAR VIDEO HERO             */}
+      {/* FULLSCREEN BUGATTI HYPERCAR HERO BACKGROUND IMAGE    */}
       {/* ---------------------------------------------------- */}
       <section className="relative w-full h-screen flex flex-col justify-between items-center pt-24 pb-12 px-6 lg:px-12 select-none">
         
-        {/* Fullscreen Video Stream Background */}
+        {/* Fullscreen Hero Background Image (Les Légendes du Ciel Jet Edition) */}
         <div className="absolute inset-0 z-0 overflow-hidden bg-black">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover scale-105"
-          >
-            <source src="/hero-video.mp4" type="video/mp4" />
-            <source
-              src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              type="video/mp4"
-            />
-          </video>
+          <img
+            src="/bugatti-hero-jet.jpg"
+            alt="Konoha Automobili Les Légendes du Ciel"
+            className="w-full h-full object-cover scale-105 filter brightness-90 contrast-105"
+          />
 
-          {/* Minimal Dark Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-black/20 to-black/50 pointer-events-none" />
+          {/* Luxury Atmospheric Dark Overlays */}
+          <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-black/20 to-black/60 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-obsidian/40 pointer-events-none" />
           <div className="absolute inset-0 noise-overlay pointer-events-none" />
         </div>
 
@@ -120,10 +113,9 @@ const Home = () => {
           {/* Right Image Showcase Frame */}
           <div className="lg:col-span-7 relative group">
             <div className="relative rounded-3xl overflow-hidden border border-copper/40 shadow-2xl bg-black">
-              {/* Image Frame with CSS rotation handling for portrait-format user photo */}
               <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden flex items-center justify-center bg-black">
                 <img
-                  src="/bugatti-jet.png"
+                  src="/bugatti-hero-jet.jpg"
                   alt="Konoha Hypercar Les Légendes du Ciel"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter contrast-105 brightness-95"
                 />
