@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Volume2, VolumeX, Sliders, ShieldCheck, Zap, Sparkles, Flame, Eye } from 'lucide-react';
+import { ArrowRight, Volume2, VolumeX, Sliders, ShieldCheck, Zap, Sparkles } from 'lucide-react';
 import SEO from '../components/common/SEO';
 import { FALLBACK_VEHICLES, FALLBACK_NEWS } from '../services/api';
 
@@ -62,76 +62,9 @@ const Home = () => {
       </section>
 
       {/* ---------------------------------------------------- */}
-      {/* FEATURE SHOWCASE: LES LÉGENDES DU CIEL (JET EDITION) */}
-      {/* ---------------------------------------------------- */}
-      <section className="py-24 px-6 lg:px-12 relative border-y border-white/10 bg-obsidian-light overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          {/* Left Text Column */}
-          <div className="lg:col-span-5 space-y-6 z-10">
-            <span className="text-xs font-mono text-copper uppercase tracking-[0.3em] inline-flex items-center gap-2">
-              <Flame className="w-4 h-4 text-copper" />
-              <span>Special Bespoke Edition</span>
-            </span>
-            <h2 className="font-brand text-3xl md:text-5xl font-extrabold uppercase tracking-wider leading-tight">
-              Les Légendes du Ciel
-            </h2>
-            <p className="text-titanium-dark font-sans leading-relaxed text-sm md:text-base">
-              A tribute to aviation pioneers and naval fighter jet pilots. The Konoha Chiron Edition stands alongside the Dassault Rafale jet fighter—forged from matte carbon fiber, titanium exhaust outlets, and hand-painted French racing stripes.
-            </p>
-
-            <div className="grid grid-cols-2 gap-4 pt-2 font-mono text-xs">
-              <div className="p-4 rounded-xl glass-panel border border-white/10">
-                <span className="text-[10px] text-titanium-dark block uppercase tracking-wider">Top Speed</span>
-                <span className="text-copper font-bold text-lg">440 KM/H</span>
-              </div>
-              <div className="p-4 rounded-xl glass-panel border border-white/10">
-                <span className="text-[10px] text-titanium-dark block uppercase tracking-wider">Limited Run</span>
-                <span className="text-white font-bold text-lg">20 UNITS</span>
-              </div>
-            </div>
-
-            <div className="pt-4 flex items-center gap-4">
-              <Link
-                to="/vehicle/konoha-apex-stratos"
-                className="inline-flex items-center gap-2 bg-gradient-copper text-obsidian font-mono text-xs font-bold uppercase tracking-widest py-3.5 px-7 rounded-xl shadow-2xl hover:opacity-90 transition-all"
-              >
-                <span>View Specification</span>
-                <Eye className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-
-          {/* Right Image Showcase Frame */}
-          <div className="lg:col-span-7 relative group">
-            <div className="relative rounded-3xl overflow-hidden border border-copper/40 shadow-2xl bg-black">
-              <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden flex items-center justify-center bg-black">
-                <img
-                  src="/bugatti-hero-jet.jpg"
-                  alt="Konoha Hypercar Les Légendes du Ciel"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter contrast-105 brightness-95"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-60" />
-              </div>
-
-              {/* Caption Overlay Badge */}
-              <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between p-4 rounded-2xl bg-black/80 backdrop-blur-md border border-white/15">
-                <div>
-                  <h4 className="font-brand text-sm font-bold text-white uppercase tracking-wider">KONOHA CHIRON • LES LÉGENDES DU CIEL</h4>
-                  <span className="text-[10px] font-mono text-titanium-dark uppercase tracking-widest block">Matte Grey Finish x Dassault Rafale Aviation Tub</span>
-                </div>
-                <span className="text-xs font-mono text-copper border border-copper/40 px-3 py-1 rounded-full uppercase tracking-widest">1 OF 20</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* ---------------------------------------------------- */}
       {/* BRAND PHILOSOPHY & KINETIC NUMBERS                   */}
       {/* ---------------------------------------------------- */}
-      <section className="py-28 px-6 lg:px-12 relative bg-obsidian-light">
+      <section className="py-28 px-6 lg:px-12 relative border-t border-white/10 bg-obsidian-light">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <span className="text-xs font-mono text-copper uppercase tracking-[0.3em] block mb-3">
