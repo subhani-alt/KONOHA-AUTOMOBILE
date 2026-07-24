@@ -52,19 +52,11 @@ const Home = () => {
           </button>
         </div>
 
-        {/* Bottom Minimal Action Overlay */}
-        <div className="relative z-10 w-full flex items-center justify-between">
+        {/* Bottom Minimal Action Overlay (Clean Brand Copyright) */}
+        <div className="relative z-10 w-full flex items-center justify-start">
           <div className="text-[10px] font-mono tracking-[0.3em] uppercase text-titanium-light bg-black/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
             KONOHA AUTOMOBILI © 2026
           </div>
-
-          <Link
-            to="/configurator"
-            className="inline-flex items-center gap-2 font-mono text-xs tracking-[0.25em] uppercase text-copper hover:text-white bg-black/70 backdrop-blur-md border border-copper/50 hover:border-copper px-6 py-3 rounded-full transition-all shadow-2xl"
-          >
-            <Sliders className="w-3.5 h-3.5" />
-            <span>ENTER 3D STUDIO</span>
-          </Link>
         </div>
 
       </section>
