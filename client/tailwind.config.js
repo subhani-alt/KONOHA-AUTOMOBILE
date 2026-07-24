@@ -14,14 +14,14 @@ export default {
           border: '#1E1E1E',
         },
         copper: {
-          light: '#E59B73',
-          DEFAULT: '#C87D55',
-          dark: '#A65F38',
+          light: '#FFFFFF',
+          DEFAULT: '#FFFFFF',
+          dark: '#F0F0F0',
         },
         gold: {
-          light: '#F2D785',
-          DEFAULT: '#D4AF37',
-          dark: '#B39124',
+          light: '#FFFFFF',
+          DEFAULT: '#FFFFFF',
+          dark: '#F0F0F0',
         },
         titanium: {
           light: '#E2E8F0',
@@ -48,9 +48,10 @@ export default {
         },
       },
       backgroundImage: {
-        'gradient-copper': 'linear-gradient(135deg, #C87D55 0%, #D4AF37 100%)',
+        'gradient-copper': 'linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 100%)',
+        'gradient-gold': 'linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 100%)',
         'gradient-dark': 'linear-gradient(180deg, rgba(5,5,5,0.8) 0%, rgba(5,5,5,0.95) 100%)',
-        'glass-pattern': 'radial-gradient(circle at 50% 50%, rgba(200, 125, 85, 0.08) 0%, transparent 60%)',
+        'glass-pattern': 'radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 60%)',
       },
     },
   },

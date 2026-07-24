@@ -5,8 +5,8 @@
 @layer base {
   :root {
     --color-obsidian: #050505;
-    --color-copper: #C87D55;
-    --color-gold: #D4AF37;
+    --color-copper: #FFFFFF;
+    --color-gold: #FFFFFF;
     --color-titanium: #C0C0C0;
   }
 
@@ -28,7 +28,7 @@
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #C87D55;
+    background: #FFFFFF;
   }
 }
 
@@ -37,7 +37,7 @@
   background: rgba(17, 17, 17, 0.65);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .glass-panel-hover {
@@ -46,24 +46,24 @@
 
 .glass-panel-hover:hover {
   background: rgba(24, 24, 24, 0.85);
-  border-color: rgba(200, 125, 85, 0.35);
-  box-shadow: 0 10px 30px -10px rgba(200, 125, 85, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(255, 255, 255, 0.15);
 }
 
 .text-gradient-copper {
-  background: linear-gradient(135deg, #F8F9FA 0%, #C87D55 60%, #D4AF37 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 50%, #E2E8F0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-gold {
-  background: linear-gradient(135deg, #FFF 0%, #D4AF37 50%, #C87D55 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 50%, #E2E8F0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-stroke-titanium {
-  -webkit-text-stroke: 1px rgba(192, 192, 192, 0.3);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
   color: transparent;
 }
 
