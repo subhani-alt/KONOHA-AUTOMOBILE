@@ -23,30 +23,41 @@ const Home = () => {
       <SEO title="KONOHA AUTOMOBILI | Hypercar Experience" description="Experience Konoha Automobili hypercar engineering, 3D WebGL configurator, and bespoke client atelier." />
 
       {/* ---------------------------------------------------- */}
-      {/* FULLSCREEN AUTOPLAY HYPERCAR VIDEO HERO (NO TEXT MATTER) */}
+      {/* FULLSCREEN AUTOPLAY HYPERCAR VIDEO HERO             */}
       {/* ---------------------------------------------------- */}
       <section className="relative w-full h-screen flex flex-col justify-between items-center pt-24 pb-12 px-6 lg:px-12 select-none">
         
-        {/* Fullscreen HD Video Stream Playing Automatically on Site Open */}
-        <div className="absolute inset-0 z-0 overflow-hidden bg-black">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover scale-105"
-          >
-            <source
-              src="https://assets.mixkit.co/videos/preview/mixkit-sports-car-driving-on-a-road-41562-large.mp4"
-              type="video/mp4"
-            />
-            <source
-              src="https://cdn.pixabay.com/video/2021/04/13/70960-536488349_large.mp4"
-              type="video/mp4"
-            />
-          </video>
+        {/* Fullscreen Video Background */}
+        <div className="absolute inset-0 z-0 overflow-hidden bg-black pointer-events-none">
+          <div className="relative w-full h-full">
+            {/* Primary Fullscreen High-Speed Video Stream */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover scale-105"
+            >
+              <source
+                src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                type="video/mp4"
+              />
+              <source
+                src="https://assets.mixkit.co/videos/preview/mixkit-sports-car-driving-on-a-road-41562-large.mp4"
+                type="video/mp4"
+              />
+            </video>
 
-          {/* Minimal Vignette & Gradient Overlays */}
+            {/* YouTube Embed Layer (HVf28fVK5Xk) */}
+            <iframe
+              src="https://www.youtube.com/embed/HVf28fVK5Xk?autoplay=1&mute=1&controls=0&loop=1&playlist=HVf28fVK5Xk&playsinline=1&rel=0&modestbranding=1&enablejsapi=1"
+              className="w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover pointer-events-none border-0 scale-125 opacity-70"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              title="Konoha Hypercar Video"
+            />
+          </div>
+
+          {/* Minimal Gradient Vignette */}
           <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-black/60 pointer-events-none" />
           <div className="absolute inset-0 noise-overlay pointer-events-none" />
         </div>
@@ -62,7 +73,7 @@ const Home = () => {
           </button>
         </div>
 
-        {/* Bottom Minimal Action Overlay (Clean Unobstructed Video View) */}
+        {/* Bottom Minimal Action Overlay */}
         <div className="relative z-10 w-full flex items-center justify-between">
           <div className="text-[10px] font-mono tracking-[0.3em] uppercase text-titanium-light bg-black/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
             KONOHA AUTOMOBILI © 2026
