@@ -28,30 +28,34 @@ const Home = () => {
       {/* ---------------------------------------------------- */}
       <section className="relative w-full h-screen flex flex-col justify-between items-center pt-24 pb-16 px-6 lg:px-12 select-none">
         
-        {/* Fullscreen Video Background */}
-        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        {/* Fullscreen Video Background (No Poster Image, Pure Video Stream) */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-obsidian">
           <div className="relative w-full h-full">
-            {/* Direct High-Resolution Hypercar Video Background */}
+            
+            {/* Fullscreen HD Bugatti Style Driving Video */}
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="w-full h-full object-cover scale-105"
-              poster="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1920&q=85"
+              className="w-full h-full object-cover scale-105 opacity-90"
             >
+              <source
+                src="https://cdn.pixabay.com/video/2021/04/13/70960-536488349_large.mp4"
+                type="video/mp4"
+              />
               <source
                 src="https://assets.mixkit.co/videos/preview/mixkit-sports-car-driving-on-a-road-41562-large.mp4"
                 type="video/mp4"
               />
             </video>
 
-            {/* YouTube Embed Layer (HVf28fVK5Xk) */}
+            {/* YouTube Embed Layer for HVf28fVK5Xk */}
             <iframe
               src="https://www.youtube.com/embed/HVf28fVK5Xk?autoplay=1&mute=1&controls=0&loop=1&playlist=HVf28fVK5Xk&playsinline=1&rel=0&modestbranding=1"
-              className="w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover pointer-events-none border-0 scale-110 opacity-80"
+              className="w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover pointer-events-none border-0 scale-110 opacity-70"
               allow="autoplay; encrypted-media; picture-in-picture"
-              title="Konoha Bugatti HVf28fVK5Xk Video"
+              title="Konoha Bugatti Video HVf28fVK5Xk"
             />
           </div>
 
