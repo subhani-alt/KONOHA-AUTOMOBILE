@@ -23,11 +23,11 @@ const Home = () => {
       <SEO title="KONOHA AUTOMOBILI | Hypercar Experience" description="Experience Konoha Automobili hypercar engineering, 3D WebGL configurator, and bespoke client atelier." />
 
       {/* ---------------------------------------------------- */}
-      {/* FULLSCREEN AUTOPLAY HYPERCAR VIDEO HERO (PURE VIDEO) */}
+      {/* FULLSCREEN AUTOPLAY HYPERCAR VIDEO HERO (LOCAL FILE) */}
       {/* ---------------------------------------------------- */}
       <section className="relative w-full h-screen flex flex-col justify-between items-center pt-24 pb-12 px-6 lg:px-12 select-none">
         
-        {/* Fullscreen Video Stream Background (Zero YouTube Iframe Errors) */}
+        {/* Fullscreen Video Stream Background (Guaranteed Local Autoplay) */}
         <div className="absolute inset-0 z-0 overflow-hidden bg-black">
           <video
             autoPlay
@@ -36,17 +36,14 @@ const Home = () => {
             playsInline
             className="w-full h-full object-cover scale-105"
           >
+            <source src="/hero-video.mp4" type="video/mp4" />
             <source
               src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
               type="video/mp4"
             />
-            <source
-              src="https://assets.mixkit.co/videos/preview/mixkit-sports-car-driving-on-a-road-41562-large.mp4"
-              type="video/mp4"
-            />
           </video>
 
-          {/* Subtle Dark Gradient Overlay */}
+          {/* Minimal Dark Gradient Vignette */}
           <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-black/20 to-black/50 pointer-events-none" />
           <div className="absolute inset-0 noise-overlay pointer-events-none" />
         </div>
